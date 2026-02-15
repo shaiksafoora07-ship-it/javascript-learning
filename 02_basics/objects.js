@@ -11,20 +11,24 @@ const  user ={
     LastLoginDate : ["monday","saturday"] 
 }
 //access using .notation
-console.log(user.email)
-console.log(user["email"])
-console.log(user[mySym])  
-console.log(typeof user[mySym])
-//change the values
-user.email = "safu@gmail.com"
+// console.log(user.email)
+// console.log(user["email"])
+// console.log(user[mySym])  
+// console.log(typeof user[mySym])
+// //change the values
+// user.email = "safu@gmail.com"
 
 //freeze the values 
-Object.freeze(user)// after this value does not change
+//Object.freeze(user)// after this value does not change
 // user.email = "safuuuu@google.com"
 // console.log(user);
 
 
 user.greeting = function(){
-    return "hello user";
+    console.log("hello user");
+}
+user.greeting1 = function() {
+    console.log(`hello js ${this.name}`)
 }
 console.log(user.greeting());
+console.log(user.greeting1())
