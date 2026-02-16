@@ -25,4 +25,41 @@ function loginUser(username){
     return `${username} just logged in`
 }
 //console.log(loginUser("safoora"))
-console.log(loginUser())  //---  IF WE DOES NOT GIVE ANY VALUE , ---> UNDEFINED //to check use if  
+//console.log(loginUser())  //---  IF WE DOES NOT GIVE ANY VALUE , ---> UNDEFINED //to check use if  
+
+function calculateCartPrice(num1){
+    return num1
+}
+//console.log(calculateCartPrice(2,200,300))// it prints only one element toget all use (...)
+function calculateCartPrice(...num1){
+    return num1
+}
+//console.log(calculateCartPrice(100,399,419));
+function calculateCartPrice(val1,val2,...num1){
+    return num1
+}
+//console.log(calculateCartPrice(2,3,4,4,5,5)) //--2 is val1, 3 is val2 so other prints cuz we return num1 only
+
+//PASSING OBJECTS IN FUNCTIONS
+const user = {
+    username : "safoora",
+    price : "199"
+}
+function handleObject(anyObject){
+    console.log(`username is ${anyObject.username} and price is ${anyObject.price}`)
+}
+//handleObject(user)
+//direct passing the object
+handleObject({
+    username : "safura",
+    price:"200"
+})
+
+//PASSING ARRAYS IN FUNCTIONS
+const myArray = [300,700,500,6000]
+function secondValue(getArray){
+return getArray[1]
+}
+//console.log(secondValue(myArray))
+//passing direct array
+console.log(secondValue([200,300,400,499]))
